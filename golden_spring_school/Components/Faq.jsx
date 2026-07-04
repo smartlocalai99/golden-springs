@@ -80,11 +80,11 @@ export default function Faq() {
               <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <PhoneCall size={20} />
-                  <span>+91 XXXXX XXXXX</span>
+                  <span>+91 89194 73332</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail size={20} />
-                  <span>info@goldenspringschool.com</span>
+                  <span>goldenspringschool@gmail.com</span>
                 </div>
               </div>
             </div>

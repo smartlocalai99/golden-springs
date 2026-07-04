@@ -6,6 +6,7 @@ import Program from "../Components/Program";
 import Testimonial from "../Components/Testimonial";
 import Footer from "../Components/Footer";
 import Faq from "../Components/Faq";
+import Gallery from "../Components/gallery";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       <Hero />
       <About />
       <Program />
-     <Features />
+      <Features />
+      <Gallery />
       <Testimonial />
       <Faq />
       <Footer />

@@ -1,39 +1,54 @@
-﻿import { motion } from "framer-motion";
-import {
-  Baby,
-  BookOpen,
-  GraduationCap,
-  ArrowRight,
-} from "lucide-react";
+﻿import { useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import programImage1 from "./images/programs1.jpg";
+import programImage2 from "./images/programs2.jpg";
+import programImage3 from "./images/programs3.jpg";
 
 const programs = [
   {
-    icon: Baby,
     title: "Pre-Primary",
+    image: programImage1,
     classes: "Nursery • Kindergarten • LKG • UKG",
     color: "bg-[#ccfbf1] text-[#0f766e]",
     description:
       "Our Pre-Primary section provides a joyful and nurturing environment where young learners develop communication, creativity, confidence, and social skills through activity-based learning and play.",
+    highlights: [
+      "Activity-based learning and guided play",
+      "Language, motor, and social skill development",
+      "Safe, caring, and encouraging classrooms",
+    ],
   },
   {
-    icon: BookOpen,
     title: "Primary",
+    image: programImage2,
     classes: "Classes I – V",
     color: "bg-[#fef3c7] text-[#b8860b]",
     description:
       "The Primary curriculum focuses on building strong academic foundations while encouraging curiosity, creativity, critical thinking, and overall personality development in every child.",
+    highlights: [
+      "Strong foundation in core academic subjects",
+      "Creative projects and co-curricular exposure",
+      "Focus on curiosity, discipline, and confidence",
+    ],
   },
   {
-    icon: GraduationCap,
     title: "Secondary",
+    image: programImage3,
     classes: "Classes VI – X",
     color: "bg-[#ccfbf1] text-[#0f766e]",
     description:
       "Our Secondary program prepares students for academic excellence through conceptual learning, practical knowledge, leadership development, career awareness, and board examination readiness.",
+    highlights: [
+      "Concept-based learning with practical exposure",
+      "Leadership, career awareness, and exam readiness",
+      "Holistic development for higher studies and life skills",
+    ],
   },
 ];
 
 export default function Programs() {
+  const [openProgram, setOpenProgram] = useState(null);
   return (
     <section id="programs" className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -61,33 +76,64 @@ export default function Programs() {
         </motion.div>
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {programs.map((program, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="rounded-[30px] bg-white border border-slate-200 p-8 transition-all duration-300"
-            >
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${program.color}`}>
-                <program.icon size={32} />
-              </div>
+          {programs.map((program, index) => {
+            const isOpen = openProgram === index;
 
-              <span className="inline-block mt-6 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700">
-                {program.classes}
-              </span>
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="rounded-[30px] border border-slate-200 bg-white p-8 transition-all duration-300"
+              >
+                <div className="mb-6 h-40 overflow-hidden rounded-[24px] border border-slate-200 bg-slate-100">
+                  <img
+                    src={program.image.src}
+                    alt={`${program.title} program`}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
 
-              <h3 className="mt-6 text-3xl font-bold text-slate-900">{program.title}</h3>
-              <p className="mt-5 text-slate-600 leading-8">{program.description}</p>
+                <span className="inline-block mt-6 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700">
+                  {program.classes}
+                </span>
 
-              <button className="mt-8 flex items-center gap-2 font-semibold text-[#0f766e] hover:gap-3 transition-all">
-                Learn More
-                <ArrowRight size={18} />
-              </button>
-            </motion.div>
-          ))}
+                <h3 className="mt-6 text-3xl font-bold text-slate-900">{program.title}</h3>
+                <p className="mt-5 text-slate-600 leading-8">{program.description}</p>
+
+                <button
+                  onClick={() => setOpenProgram(isOpen ? null : index)}
+                  className="mt-8 flex items-center gap-2 font-semibold text-[#0f766e] transition-all hover:gap-3"
+                >
+                  {isOpen ? "Show Less" : "Learn More"}
+                  <ArrowRight size={18} className={isOpen ? "rotate-90" : ""} />
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isOpen ? "mt-5 max-h-64 opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="rounded-2xl bg-slate-50 p-4">
+                    <p className="text-sm font-semibold text-slate-900">
+                      What students experience
+                    </p>
+                    <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-600">
+                      {program.highlights.map((item, idx) => (
+                        <li key={idx} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#0f766e]" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div

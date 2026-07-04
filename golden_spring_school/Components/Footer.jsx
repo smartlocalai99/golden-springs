@@ -55,11 +55,11 @@ export default function Footer() {
               </div>
               <div className="flex gap-3">
                 <Phone className="shrink-0 text-[#fef3c7]" />
-                <p>+91 XXXXX XXXXX</p>
+                <p>+91 89194 73332</p>
               </div>
               <div className="flex gap-3">
                 <Mail className="shrink-0 text-[#fef3c7]" />
-                <p>info@goldenspringschool.com</p>
+                <p>goldenspringschool@gmail.com</p>
               </div>
               <div className="flex gap-3">
                 <Globe className="shrink-0 text-[#fef3c7]" />
