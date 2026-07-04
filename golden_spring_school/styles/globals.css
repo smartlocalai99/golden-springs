@@ -1,0 +1,82 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  --accent: #0f766e;
+  --accent-dark: #115e59;
+  --accent-soft: #ccfbf1;
+  --secondary: #b8860b;
+  --secondary-soft: #fef3c7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #fcfcfb;
+  color: #0f172a;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 5s infinite ease-in-out;
+}
