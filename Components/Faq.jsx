@@ -45,12 +45,11 @@ export default function Faq() {
 
   return (
     <section id="faqs" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
             <span className="inline-block bg-[#fef3c7] text-[#b8860b] px-5 py-2 rounded-full font-semibold">
@@ -93,7 +92,6 @@ export default function Faq() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
             className="space-y-5"
           >
@@ -118,7 +116,6 @@ export default function Faq() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
                     >
                       <p className="px-8 pb-6 text-slate-600 leading-8">{faq.answer}</p>
                     </motion.div>

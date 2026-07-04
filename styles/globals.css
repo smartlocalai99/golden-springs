@@ -35,12 +35,10 @@ img {
 
 a {
   text-decoration: none;
-  transition: 0.3s;
 }
 
 button {
   cursor: pointer;
-  transition: 0.3s;
 }
 
 ::selection {
@@ -78,5 +76,5 @@ button {
 }
 
 .animate-float {
-  animation: float 5s infinite ease-in-out;
+  animation: float 5s infinite;
 }

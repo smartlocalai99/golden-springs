@@ -15,12 +15,11 @@ export default function Hero() {
       className="relative overflow-hidden bg-white pt-32 pb-20"
     >
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
           >
             <span className="inline-flex items-center rounded-full bg-[#fef3c7] text-[#b8860b] px-5 py-2 text-sm font-semibold">
               Admissions Open • 2026–27
@@ -41,7 +40,7 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="#about"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0f766e] px-8 py-4 text-white font-semibold hover:bg-[#115e59] transition"
+                className="inline-flex items-center gap-2 rounded-full bg-[#0f766e] px-8 py-4 text-white font-semibold hover:bg-[#115e59]"
               >
                 Explore School
                 <ArrowRight size={18} />
@@ -49,7 +48,7 @@ export default function Hero() {
 
               <a
                 href="#contact"
-                className="rounded-full border border-slate-300 bg-white px-8 py-4 font-semibold hover:border-[#0f766e] hover:text-[#0f766e] transition"
+                className="rounded-full border border-slate-300 bg-white px-8 py-4 font-semibold hover:border-[#0f766e] hover:text-[#0f766e]"
               >
                 Contact Us
               </a>
@@ -64,7 +63,6 @@ export default function Hero() {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ y: -5 }}
                   className="rounded-[24px] border border-slate-200 bg-white p-5"
                 >
                   <item.icon className="text-[#0f766e] mb-3" size={28} />
@@ -78,7 +76,6 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9 }}
             className="relative mx-auto w-full max-w-2xl"
           >
             <div className="relative overflow-hidden rounded-[40px] border border-slate-200 bg-white p-2">

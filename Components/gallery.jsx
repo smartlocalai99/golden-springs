@@ -29,7 +29,7 @@ const galleryItems = [
 export default function Gallery() {
   return (
     <section id="gallery" className="bg-slate-50 py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="mx-auto px-6 lg:px-10">
         <div className="max-w-3xl">
           <span className="inline-block rounded-full bg-[#ecfeff] px-5 py-2 text-sm font-semibold text-[#0f766e]">
             Gallery

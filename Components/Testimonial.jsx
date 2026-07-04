@@ -25,11 +25,10 @@ const testimonials = [
 export default function Testimonial() {
   return (
     <section id="testimonials" className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="mx-auto px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="mx-auto max-w-3xl text-center"
         >
@@ -53,10 +52,8 @@ export default function Testimonial() {
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -6, scale: 1.01 }}
-              className="group relative rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm transition-colors duration-300 hover:bg-[#0f766e]"
+              className="group relative rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm"
             >
               <div className="absolute right-6 top-6 text-[#0f766e]/10">
                 <Quote size={64} />
@@ -64,17 +61,17 @@ export default function Testimonial() {
 
               <div className="flex gap-1">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} size={18} fill="#b8860b" stroke="#b8860b" className="transition-colors duration-300 group-hover:fill-white group-hover:stroke-white" />
+                  <Star key={star} size={18} fill="#b8860b" stroke="#b8860b" />
                 ))}
               </div>
 
-              <p className="mt-8 text-base leading-8 text-slate-600 transition-colors duration-300 group-hover:text-white">
+              <p className="mt-8 text-base leading-8 text-slate-600">
                 “{item.review}”
               </p>
 
-              <div className="mt-10 border-t border-slate-100 pt-6 transition-colors duration-300 group-hover:border-white/20">
-                <h4 className="text-lg font-semibold text-slate-900 transition-colors duration-300 group-hover:text-white">{item.name}</h4>
-                <p className="mt-1 text-sm text-slate-500 transition-colors duration-300 group-hover:text-[#d1fae5]">{item.role}</p>
+              <div className="mt-10 border-t border-slate-100 pt-6">
+                <h4 className="text-lg font-semibold text-slate-900">{item.name}</h4>
+                <p className="mt-1 text-sm text-slate-500">{item.role}</p>
               </div>
             </motion.div>
           ))}

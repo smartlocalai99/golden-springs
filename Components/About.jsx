@@ -25,7 +25,7 @@ export default function About() {
       id="about"
       className="py-24 bg-white overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="mx-auto px-6 lg:px-10">
 
         <div className="grid lg:grid-cols-2 gap-20 items-center">
 
@@ -34,7 +34,6 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
             className="relative"
           >
@@ -45,7 +44,6 @@ export default function About() {
                 alt="Golden Spring School"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8 }}
                 className="w-full max-h-[560px] h-auto object-contain object-center"
               />
             </div>
@@ -57,7 +55,7 @@ export default function About() {
                 <button
                   key={index}
                   onClick={() => setCurrentImage(index)}
-                  className={`h-3 w-3 rounded-full transition-all ${
+                  className={`h-3 w-3 rounded-full ${
                     currentImage === index
                       ? "bg-white scale-125"
                       : "bg-white/50"
@@ -73,7 +71,6 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
 
@@ -148,7 +145,7 @@ export default function About() {
 
             <a
               href="#programs"
-              className="inline-block mt-10 bg-[#0f766e] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#115e59] transition"
+              className="inline-block mt-10 bg-[#0f766e] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#115e59]"
             >
               Explore Academics
             </a>

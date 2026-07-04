@@ -10,7 +10,7 @@ import logoImage from "./images/logo.jpg";
 export default function Footer() {
   return (
     <footer id="contact" className="bg-[#0f766e] text-white pt-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="mx-auto px-6 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
@@ -38,11 +38,11 @@ export default function Footer() {
           <div>
             <h3 className="mb-6 text-xl font-semibold">Quick Links</h3>
             <ul className="space-y-4 text-[#d1fae5]">
-              <li><a href="#home" className="hover:text-white transition">Home</a></li>
-              <li><a href="#about" className="hover:text-white transition">About</a></li>
-              <li><a href="#programs" className="hover:text-white transition">Academics</a></li>
-              <li><a href="#features" className="hover:text-white transition">Facilities</a></li>
-              <li><a href="#faqs" className="hover:text-white transition">Admissions</a></li>
+              <li><a href="#home" className="hover:text-white">Home</a></li>
+              <li><a href="#about" className="hover:text-white">About</a></li>
+              <li><a href="#programs" className="hover:text-white">Academics</a></li>
+              <li><a href="#features" className="hover:text-white">Facilities</a></li>
+              <li><a href="#faqs" className="hover:text-white">Admissions</a></li>
             </ul>
           </div>
 
@@ -73,7 +73,7 @@ export default function Footer() {
           <p className="text-[#ccfbf1] text-center">
             © {new Date().getFullYear()} Golden Spring School. All Rights Reserved.
           </p>
-          <a href="#home" className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
+          <a href="#home" className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20">
             <ArrowUp size={20} />
           </a>
         </div>

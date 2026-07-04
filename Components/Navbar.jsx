@@ -25,13 +25,13 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 ${
         scrolled
           ? "bg-white/95 backdrop-blur-lg border-b border-slate-100"
           : "bg-white"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
           <a href="#home" className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white">
@@ -58,7 +58,7 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-slate-700 hover:text-[#0f766e] font-medium transition"
+                className="text-slate-700 hover:text-[#0f766e] font-medium"
               >
                 {item.label}
               </a>
@@ -66,7 +66,7 @@ export default function Navbar() {
 
             <a
               href="#contact"
-              className="rounded-full bg-[#0f766e] text-white px-6 py-3 font-semibold hover:bg-[#115e59] transition"
+              className="rounded-full bg-[#0f766e] text-white px-6 py-3 font-semibold hover:bg-[#115e59]"
             >
               Admissions Open
             </a>

@@ -51,11 +51,10 @@ export default function Programs() {
   const [openProgram, setOpenProgram] = useState(null);
   return (
     <section id="programs" className="bg-white py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="mx-auto px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="max-w-3xl mx-auto text-center"
         >
@@ -84,10 +83,8 @@ export default function Programs() {
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="rounded-[30px] border border-slate-200 bg-white p-8 transition-all duration-300"
+                className="rounded-[30px] border border-slate-200 bg-white p-8"
               >
                 <div className="mb-6 h-40 overflow-hidden rounded-[24px] border border-slate-200 bg-slate-100">
                   <img
@@ -106,14 +103,14 @@ export default function Programs() {
 
                 <button
                   onClick={() => setOpenProgram(isOpen ? null : index)}
-                  className="mt-8 flex items-center gap-2 font-semibold text-[#0f766e] transition-all hover:gap-3"
+                  className="mt-8 flex items-center gap-2 font-semibold text-[#0f766e]"
                 >
                   {isOpen ? "Show Less" : "Learn More"}
                   <ArrowRight size={18} className={isOpen ? "rotate-90" : ""} />
                 </button>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
+                  className={`overflow-hidden ${
                     isOpen ? "mt-5 max-h-64 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
@@ -139,7 +136,6 @@ export default function Programs() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="mt-24 rounded-[40px] border border-slate-200 bg-white p-12 text-center text-slate-900"
         >
@@ -156,7 +152,7 @@ export default function Programs() {
 
           <a
             href="#contact"
-            className="inline-block mt-10 rounded-full bg-[#0f766e] px-8 py-4 font-semibold text-white transition hover:bg-[#115e59]"
+            className="inline-block mt-10 rounded-full bg-[#0f766e] px-8 py-4 font-semibold text-white hover:bg-[#115e59]"
           >
             Apply for Admission
           </a>
